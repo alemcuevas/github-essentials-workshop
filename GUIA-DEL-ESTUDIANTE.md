@@ -853,7 +853,7 @@ Durante las siguientes cuatro semanas:
 ## Referencias
 
 - [Módulos detallados](./modulos/)
-- [Glosario](./recursos/glosario.md)
+- [Glosario](./GLOSARIO.md)
 - [Comandos Git](./recursos/comandos-git.md)
 - [Guía de diagnóstico](./recursos/guia-de-diagnostico.md)
 - [Prompts para Copilot](./recursos/prompts-para-copilot.md)
