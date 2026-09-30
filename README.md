@@ -124,12 +124,24 @@ Si eres participante, comienza con la [Guía del estudiante](./GUIA-DEL-ESTUDIAN
 
 Puedes continuar aunque no hayas terminado una mejora visual: el objetivo principal es practicar el recorrido del cambio.
 
+## One pagers y créditos
+
+> **Autoría y crédito:** los one pagers **De tu estación a producción** y **GitHub Kitchen Challenge**, así como la idea original de explicar el ciclo de GitHub mediante una cocina colaborativa, fueron creados por **Diana Lira**.
+
+### De tu estación a producción
+
+[![One pager De tu estación a producción, creado por Diana Lira](./DE-TU-ESTACION-A-PRODUCCION.PNG)](./DE-TU-ESTACION-A-PRODUCCION.PNG)
+
+**Creación e idea original: Diana Lira.**
+
+### GitHub Kitchen Challenge
+
+[![One pager GitHub Kitchen Challenge, creado por Diana Lira](./GITHUB-KITCHEN-CHALLENGE.PNG)](./GITHUB-KITCHEN-CHALLENGE.PNG)
+
+**Creación e idea original: Diana Lira.**
+
 ## Referencias rápidas
 
-- **One pagers del taller**
-  - [De tu estación a producción](./DE-TU-ESTACION-A-PRODUCCION.PNG)
-  - [GitHub Kitchen Challenge](./GITHUB-KITCHEN-CHALLENGE.PNG)
-  - Crédito: **Diana Lira**, creadora de los materiales y creadora de la idea.
 - [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md)
 - [Reglas de colaboración](./CONTRIBUTING.md)
 - [Glosario](./GLOSARIO.md)
