@@ -66,6 +66,8 @@ El punto de partida está en [proyecto-base/](./proyecto-base/). Los módulos ag
 
 ## Cómo usar este material
 
+Si eres participante, comienza con la [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md). Ahí encontrarás el recorrido completo del taller en una sola página, con comandos, resultados esperados y puntos de recuperación.
+
 1. Abre el módulo que corresponde al bloque actual.
 2. Lee el **Objetivo del bloque** y **Qué vas a lograr aquí**.
 3. Sigue **Manos a la obra** en orden; cada paso indica qué debes ver si salió bien.
@@ -97,6 +99,7 @@ Puedes continuar aunque no hayas terminado una mejora visual: el objetivo princi
 
 ## Referencias rápidas
 
+- [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md)
 - [Glosario](./recursos/glosario.md)
 - [Comandos de Git](./recursos/comandos-git.md)
 - [Guía de diagnóstico](./recursos/guia-de-diagnostico.md)
