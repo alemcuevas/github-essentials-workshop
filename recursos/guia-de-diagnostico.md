@@ -70,7 +70,7 @@ git status
 **Cómo resolver si todavía no publicaste el commit:**
 
 ```powershell
-git switch -c feature/descripcion-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 git push -u origin HEAD
 ```
 
@@ -172,7 +172,7 @@ git log --oneline -5
 2. Crea una rama desde ese punto:
 
 ```powershell
-git switch -c feature/descripcion-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 ```
 
 3. Publica la nueva rama:
@@ -199,7 +199,7 @@ git status
 **Cómo resolver:**
 
 ```powershell
-git switch -c feature/descripcion-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 ```
 
 Los cambios del directorio normalmente permanecen al crear la rama. Si Git bloquea el cambio de rama, no fuerces la operación; pide apoyo para guardar el trabajo de forma segura.

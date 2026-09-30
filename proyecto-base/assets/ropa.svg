@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Producto de ropa</title>
+  <desc id="desc">Ilustración abstracta de una playera sobre un fondo rosa</desc>
+  <rect width="640" height="420" rx="32" fill="#fbe9f0"/>
+  <path d="M250 105l70 32 70-32 72 80-58 50-28-32v142H264V203l-28 32-58-50z" fill="#2457c5"/>
+  <path d="M285 122c8 45 62 45 70 0" fill="none" stroke="#ffd166" stroke-width="16"/>
+</svg>

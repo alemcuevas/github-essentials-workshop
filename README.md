@@ -13,6 +13,33 @@ Para personas de negocio y perfiles técnicos que:
 
 No necesitas saber HTML ni CSS. GitHub Copilot escribirá el código; tú practicarás el flujo de Git y GitHub.
 
+## Cómo se organiza el taller
+
+- Trabajarás en un equipo de exactamente dos personas.
+- Este repositorio es la **plantilla y ejemplo**; no publicarás aquí tus ejercicios.
+- Una persona creará un repositorio nuevo para la pareja mediante **Use this template**.
+- Esa persona invitará a su compañero como colaborador.
+- Ambos clonarán el repositorio de su equipo y colaborarán únicamente ahí.
+- Cada rama incluirá el nombre de quien la crea y la mejora: `feature/nombre-apellido-descripcion`.
+
+Ejemplos:
+
+```text
+feature/ana-lopez-catalogo
+feature/luis-perez-footer
+feature/ana-lopez-mensaje-banner
+```
+
+Usa minúsculas, elimina acentos, reemplaza espacios por guiones y no incluyas información distinta de tu nombre y el propósito de la rama.
+
+## Repositorio de ejemplo
+
+- **Plantilla:** `https://github.com/alemcuevas/github-essentials-workshop`
+- **Sitio publicado:** `https://alemcuevas.github.io/github-essentials-workshop/`
+- **Reglas de colaboración:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+El instructor usa este repositorio para demostrar ramas protegidas, validaciones y despliegues. Los participantes sólo lo usan para crear su repositorio con **Use this template** y consultar documentación.
+
 ## ¿Qué aprenderás?
 
 - La diferencia entre Git, que registra cambios en tu computadora, y GitHub, que aloja y coordina esos cambios.
@@ -46,7 +73,7 @@ Construirás **Contoso Retail**, una tienda ficticia con:
 - pie de página;
 - estilos adaptables con Flexbox y Grid.
 
-El punto de partida está en [proyecto-base/](./proyecto-base/). Los módulos agregan cambios al mismo sitio; no son ejercicios separados.
+El punto de partida está en [proyecto-base/](./proyecto-base/). Al crear el repositorio de tu equipo desde esta plantilla recibirás el mismo contenido. Los módulos agregan cambios al mismo sitio; no son ejercicios separados.
 
 ## Agenda exacta
 
@@ -100,6 +127,7 @@ Puedes continuar aunque no hayas terminado una mejora visual: el objetivo princi
 ## Referencias rápidas
 
 - [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md)
+- [Reglas de colaboración](./CONTRIBUTING.md)
 - [Glosario](./recursos/glosario.md)
 - [Comandos de Git](./recursos/comandos-git.md)
 - [Guía de diagnóstico](./recursos/guia-de-diagnostico.md)

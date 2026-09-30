@@ -14,17 +14,43 @@ Los participantes deben poder explicar dónde está su cambio, quién puede verl
 
 Completa estos puntos antes de abrir el salón:
 
-- [ ] Crea `[AJUSTAR: repositorio o repositorios del taller]` a partir de este material.
-- [ ] Confirma que todos pueden acceder a `[AJUSTAR: nombre de la organización]`.
-- [ ] Crea las ramas `dev` y `main`.
-- [ ] Configura protección en `dev` y `main`: Pull Request obligatorio y, si la plataforma lo permite, una aprobación.
-- [ ] Impide el push directo a `main`.
-- [ ] Prepara una validación automática simple o explica la validación existente en `[AJUSTAR: nombre de la validación]`.
-- [ ] Define si cada pareja tendrá su repositorio o si compartirán uno.
-- [ ] Asigna parejas o equipos de 3 antes del bloque 4.
+- [ ] Confirma que el repositorio de ejemplo está marcado como plantilla y que su rama `dev` existe.
+- [ ] Confirma que las validaciones y el despliegue del repositorio de ejemplo funcionan.
+- [ ] Configura protección en `dev` y `main` del repositorio de ejemplo: Pull Request obligatorio y una aprobación.
+- [ ] Impide el push directo a `main` en el repositorio de ejemplo.
+- [ ] Divide al grupo en 20 parejas antes del taller.
+- [ ] Asigna un identificador a cada pareja, desde `equipo-01` hasta `equipo-20`.
+- [ ] Pide a cada pareja acordar quién creará su repositorio desde la plantilla.
+- [ ] Confirma que cada pareja usará un repositorio propio; nadie hará ejercicios en el repositorio de ejemplo.
+- [ ] Prepara una tabla para registrar la URL del repositorio de cada pareja.
 - [ ] Identifica a los mentores de apoyo y asígnales una zona del salón.
 - [ ] Prueba todo el recorrido con una cuenta sin permisos administrativos.
-- [ ] Conserva una rama de respaldo por bloque: `respaldo/02`, `respaldo/03`, etcétera.
+- [ ] Conserva tags de respaldo por bloque en el repositorio de ejemplo: `checkpoint-02`, `checkpoint-03`, etcétera.
+
+## Modelo de repositorios
+
+El repositorio de ejemplo cumple tres funciones:
+
+1. contiene la documentación;
+2. sirve como plantilla para crear repositorios de equipo;
+3. permite demostrar protecciones, validaciones y despliegue.
+
+Cada pareja crea un repositorio como `contoso-retail-ana-luis`. La persona propietaria invita a su compañero con permiso de escritura. Los dos clonan ese repositorio y no vuelven a usar el repositorio de ejemplo para sus ejercicios.
+
+Todas las ramas siguen este formato:
+
+```text
+feature/nombre-apellido-descripcion
+```
+
+Ejemplos:
+
+```text
+feature/ana-lopez-catalogo
+feature/luis-perez-footer
+```
+
+Si hay nombres repetidos, agrega la inicial del segundo apellido. No uses el identificador del equipo como sustituto del nombre: el objetivo es reconocer quién creó cada línea de trabajo.
 
 ## Reglas de facilitación
 
@@ -58,7 +84,7 @@ Aclara que un commit no es “guardar”: el archivo ya puede estar guardado y t
 
 - Git registra versiones; GitHub aloja repositorios y coordina personas.
 - Un repositorio contiene archivos y su historial.
-- Un repositorio personal pertenece a una cuenta; uno de organización pertenece al equipo y aplica reglas comunes.
+- El repositorio de ejemplo es una plantilla; cada pareja crea un repositorio independiente para practicar sin afectar a otros equipos.
 - Clonar crea una copia local conectada con el repositorio remoto.
 
 **Qué decir**
@@ -67,13 +93,15 @@ Aclara que un commit no es “guardar”: el archivo ya puede estar guardado y t
 
 **0:05–0:15 | Demostración y práctica**
 
-1. Muestra **Code > HTTPS** en GitHub.
-2. Clona desde VS Code.
-3. Abre la terminal.
-4. Ejecuta `git status`, `git branch --show-current` y `git remote -v`.
-5. Abre `proyecto-base/index.html` en el navegador.
+1. Muestra **Use this template > Create a new repository**.
+2. Crea un repositorio de demostración y agrega al segundo integrante como colaborador.
+3. Muestra **Code > HTTPS** en el repositorio nuevo.
+4. Clona desde VS Code.
+5. Crea y publica `dev`; después regresa a `main`.
+6. Ejecuta `git status`, `git branch --show-current` y `git remote -v`.
+7. Abre `proyecto-base/index.html` en el navegador.
 
-**Qué debe verse:** rama `main`, árbol limpio y un remoto llamado `origin`.
+**Qué debe verse:** repositorio propio de la pareja, ramas `main` y `dev`, árbol limpio y un remoto llamado `origin`.
 
 **Pregunta frecuente:** “¿Clonar descarga sólo los archivos?”  
 **Respuesta:** descarga los archivos, el historial y la conexión al remoto.
@@ -91,11 +119,12 @@ Aclara que un commit no es “guardar”: el archivo ya puede estar guardado y t
 
 **Qué demostrar**
 
-1. Pide a Copilot tarjetas de productos.
-2. Guarda y actualiza el navegador.
-3. Ejecuta `git status` y `git diff`.
-4. Ejecuta `git add`, `git commit` y `git push`.
-5. Muestra el commit en GitHub.
+1. La persona A crea `feature/nombre-apellido-catalogo`.
+2. Pide a Copilot tarjetas de productos.
+3. Guarda y actualiza el navegador.
+4. Ejecuta `git status` y `git diff`.
+5. Ejecuta `git add`, `git commit` y `git push -u origin HEAD`.
+6. Muestra el commit en la rama personal de GitHub.
 
 **Qué decir**
 
@@ -117,10 +146,11 @@ Aclara que un commit no es “guardar”: el archivo ya puede estar guardado y t
 
 **Qué demostrar**
 
-1. Intenta explicar, sin forzar, por qué un push directo a `main` sería rechazado.
-2. Crea `feature/categorias`.
-3. Genera categorías con Copilot.
-4. Publica la rama con `git push -u origin feature/categorias`.
+1. Usa el repositorio de ejemplo para mostrar por qué un push directo a `main` está bloqueado; no hagas el intento desde un repositorio de participante.
+2. Cambia de la rama personal a `main` y vuelve a la rama personal.
+3. Genera categorías con Copilot en `feature/nombre-apellido-catalogo`.
+4. Publica con `git push`.
+5. Guía un PR breve hacia `dev` para dejar el catálogo disponible a ambos integrantes; avisa que el bloque 6 explicará el PR en detalle.
 
 **Qué decir**
 
@@ -130,7 +160,7 @@ Aclara que un commit no es “guardar”: el archivo ya puede estar guardado y t
 **Respuesta:** Git no crea otra carpeta completa; crea un apuntador a una línea del historial.
 
 **Señal de alerta:** nombres como `prueba2-final-ahora-si`.  
-**Acción:** comparte el patrón `feature/descripción-breve`.
+**Acción:** comparte el patrón `feature/nombre-apellido-descripcion`.
 
 ### Receso (10 minutos)
 
@@ -147,8 +177,8 @@ Pide guardar cambios y ejecutar `git status`. Nadie debe irse con un merge a med
 **Organización**
 
 - Persona A agrega una promoción.
-- Persona B agrega categorías o estilos.
-- En equipos de 3, persona C revisa el historial y coordina el orden.
+- Persona B mejora el pie de página.
+- Cada persona trabaja en su computadora y en una rama con su nombre.
 
 **Qué demostrar**
 
@@ -176,7 +206,7 @@ Pide guardar cambios y ejecutar `git status`. Nadie debe irse con un merge a med
 1. Ambas personas parten de la misma `dev`.
 2. Cada una crea una rama distinta.
 3. Ambas cambian exactamente el texto del mismo encabezado del banner en `index.html`.
-4. Integra primero la rama A a `dev`.
+4. La persona A abre un PR y la persona B integra primero esa rama a `dev`.
 5. La persona B actualiza `dev` e intenta `git merge dev` desde su rama.
 
 **Qué demostrar**
@@ -229,13 +259,13 @@ Confirma que ningún equipo tenga `unmerged paths` en `git status`.
 
 **Qué demostrar**
 
-1. Abre la pestaña **Checks** o `[AJUSTAR: panel de despliegue]`.
+1. Abre **Actions** y el workflow **Validar material del taller**.
 2. Muestra estados pendiente, correcto y fallido.
 3. Abre un registro y localiza la primera causa útil.
-4. Recorre tres tarjetas de diagnóstico del módulo.
+4. Abre el workflow **Publicar Contoso Retail en GitHub Pages** y la URL de Pages del repositorio de ejemplo.
 
 **Pregunta frecuente:** “¿Dónde está producción?”  
-**Respuesta:** en este taller es `[AJUSTAR: ambiente/URL de producción]`; en cada organización el destino y sus permisos cambian.
+**Respuesta:** en el taller, producción es la URL de GitHub Pages del repositorio del equipo. En una organización real, el destino y sus permisos pueden cambiar.
 
 **Señal de alerta:** alguien vuelve a ejecutar todo sin leer el error.  
 **Acción:** pide decir en voz alta síntoma, rama, operación y primera línea de error.
@@ -252,7 +282,7 @@ Cada equipo debe:
 4. revisar y publicar commits pequeños;
 5. actualizar la rama;
 6. abrir un PR hacia `dev`;
-7. revisar el PR de otro equipo;
+7. revisar el PR de su compañero;
 8. resolver cualquier bloqueo;
 9. explicar el recorrido del cambio.
 

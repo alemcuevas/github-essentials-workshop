@@ -9,19 +9,21 @@ Completa esta lista antes del taller. Si un punto falla, resuélvelo con soporte
   - **Captura descrita:** página de GitHub con el avatar visible; no incluyas correo, tokens ni datos privados.
 - [ ] Confirma el correo de tu cuenta si GitHub muestra un aviso.
   - **Qué debes ver:** ya no aparece el aviso de verificación.
-- [ ] Abre `[AJUSTAR: URL del repositorio del taller]`.
+- [ ] Abre `https://github.com/alemcuevas/github-essentials-workshop`.
   - **Qué debes ver:** el nombre del repositorio y su pestaña **Code**.
 
-## 2. Acceso a la organización y al repositorio
+## 2. Pareja y acceso a la plantilla
 
-- [ ] Acepta la invitación a `[AJUSTAR: nombre de la organización]`.
-  - **Qué debes ver:** la organización en la sección **Your organizations** de tu perfil.
-- [ ] Confirma que puedes leer el repositorio del taller.
+- [ ] Confirma quién será tu compañero de equipo.
+  - **Qué debes ver:** el nombre de las dos personas registrado por el instructor.
+- [ ] Confirma que ambos pueden leer el repositorio de ejemplo.
   - **Qué debes ver:** los archivos `README.md` y `proyecto-base`.
-- [ ] Confirma con el instructor si trabajarás en un repositorio personal o en uno de la organización.
-  - **Qué debes ver:** una indicación clara del repositorio que usarás.
+- [ ] Acuerden quién será la persona propietaria del repositorio del equipo.
+  - **Qué debes ver:** una persona responsable de seleccionar **Use this template** durante el bloque 1.
+- [ ] Escriban el nombre que usarán para el repositorio.
+  - **Qué debes ver:** un nombre como `contoso-retail-ana-luis`, en minúsculas y sin espacios.
 
-Un repositorio personal pertenece a tu cuenta. Un repositorio de organización pertenece al equipo y puede tener reglas adicionales, como revisiones obligatorias o ramas protegidas.
+El repositorio de ejemplo sólo contiene la plantilla y las instrucciones. Cada pareja creará su propio repositorio, agregará a ambas personas y hará ahí todos los ejercicios.
 
 ## 3. GitHub Copilot
 
@@ -74,29 +76,24 @@ git config --global user.email
 - [ ] Inicia sesión en GitHub desde VS Code si aparece la solicitud.
   - **Qué debes ver:** tu cuenta conectada en el menú de cuentas.
 
-## 6. Prueba de clonación
+## 6. Preparación para clonar
 
-Haz esta prueba sólo cuando el instructor haya compartido el repositorio.
+La clonación real ocurrirá en el bloque 1, después de crear el repositorio del equipo.
 
-- [ ] En GitHub, abre el repositorio y selecciona **Code > Local > HTTPS**.
-  - **Qué debes ver:** una dirección que termina en `.git`.
-- [ ] Copia la dirección.
-  - **Qué debes ver:** GitHub confirma que se copió.
 - [ ] En VS Code, abre la paleta con `Ctrl+Shift+P`.
   - **Qué debes ver:** un cuadro de búsqueda de comandos.
-- [ ] Ejecuta **Git: Clone**.
-  - **Qué debes ver:** VS Code solicita la dirección del repositorio.
-- [ ] Pega la dirección y selecciona una carpeta de trabajo.
-  - **Qué debes ver:** comienza la descarga.
-- [ ] Selecciona **Open** cuando VS Code pregunte si deseas abrir el repositorio.
-  - **Qué debes ver:** los archivos del taller en el explorador.
-- [ ] Abre una terminal y ejecuta:
+- [ ] Escribe `Git: Clone` sin ejecutarlo.
+  - **Qué debes ver:** el comando **Git: Clone** está disponible.
+- [ ] Cierra la paleta con `Esc`.
+- [ ] Crea una carpeta local vacía donde guardarás el repositorio del equipo.
+  - **Qué debes ver:** conoces la ubicación que seleccionarás durante el taller.
+- [ ] En una terminal fuera de cualquier repositorio, ejecuta:
 
 ```powershell
-git status
+git --version
 ```
 
-  - **Qué debes ver:** `On branch main` y `working tree clean`, o sus equivalentes en español.
+  - **Qué debes ver:** la versión de Git.
 
 ## 7. Vista previa del sitio
 
@@ -110,10 +107,11 @@ No necesitas instalar un servidor. Después de cada cambio, guarda el archivo y 
 Estás listo cuando cumples todo lo siguiente:
 
 - [ ] puedes entrar a GitHub;
-- [ ] puedes abrir el repositorio asignado;
+- [ ] conoces a tu compañero y quién creará el repositorio;
+- [ ] puedes abrir la plantilla del taller;
 - [ ] Copilot responde en VS Code;
 - [ ] `git --version` muestra una versión;
-- [ ] `git status` funciona dentro del repositorio;
+- [ ] el comando **Git: Clone** está disponible;
 - [ ] puedes abrir `proyecto-base/index.html` en el navegador.
 
 Si falta cualquiera de estos puntos, comparte con soporte el mensaje exacto que ves. Nunca compartas contraseñas, códigos de autenticación ni tokens.

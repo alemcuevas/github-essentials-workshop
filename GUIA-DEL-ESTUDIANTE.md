@@ -4,6 +4,16 @@ Esta guía contiene el paso a paso completo para terminar el taller de GitHub. P
 
 Construirás **Contoso Retail**, una tienda ficticia hecha únicamente con HTML y CSS. GitHub Copilot te ayudará a generar código; tú controlarás el flujo de Git y GitHub.
 
+Trabajarás siempre con la misma pareja. Este repositorio es una plantilla y un ejemplo: una persona creará un repositorio nuevo para el equipo, invitará a su compañero y ambos harán ahí todos los ejercicios.
+
+Tus ramas seguirán este formato:
+
+```text
+feature/nombre-apellido-descripcion
+```
+
+Por ejemplo, Ana López usaría `feature/ana-lopez-catalogo`. Escribe en minúsculas, elimina acentos y reemplaza espacios por guiones.
+
 ## Resultado final
 
 Al terminar podrás explicar y ejecutar este recorrido:
@@ -25,7 +35,7 @@ dev
     ↓
 main
     ↓
-[AJUSTAR: ambiente de producción]
+GitHub Pages del equipo
 ```
 
 ## Antes de comenzar
@@ -37,7 +47,8 @@ Completa [SETUP-PREVIO.md](./SETUP-PREVIO.md). Debes tener:
 - VS Code;
 - las extensiones **GitHub Copilot** y **GitHub Pull Requests**;
 - Git disponible;
-- acceso a `[AJUSTAR: URL del repositorio del taller]`.
+- acceso a `https://github.com/alemcuevas/github-essentials-workshop`;
+- una pareja asignada y un acuerdo sobre quién creará el repositorio.
 
 No necesitas instalar npm, JavaScript, frameworks ni dependencias.
 
@@ -85,25 +96,33 @@ git remote -v
 
 ## Meta
 
-Tener una copia local del repositorio y reconocer dónde estás trabajando.
+Crear el repositorio de la pareja desde la plantilla, compartirlo y clonarlo en ambas computadoras.
 
 ## Paso a paso
 
-1. Abre `[AJUSTAR: URL del repositorio del taller]` en GitHub.
-   - **Resultado esperado:** ves la pestaña **Code** y los archivos del taller.
-2. Selecciona **Code > Local > HTTPS**.
-   - **Resultado esperado:** aparece una dirección terminada en `.git`.
-3. Copia esa dirección.
-   - **Resultado esperado:** GitHub confirma que se copió.
-4. Abre VS Code.
-5. Presiona `Ctrl+Shift+P`.
-6. Ejecuta **Git: Clone**.
-7. Pega la dirección del repositorio.
-8. Elige una carpeta local.
-9. Selecciona **Open** cuando VS Code lo solicite.
+1. Confirmen quién será la persona A y quién será la persona B.
+   - **Resultado esperado:** la persona A creará el repositorio.
+2. La persona A abre `https://github.com/alemcuevas/github-essentials-workshop`.
+   - **Resultado esperado:** aparece el botón **Use this template**.
+3. La persona A selecciona **Use this template > Create a new repository**.
+4. Escribe un nombre como `contoso-retail-ana-luis`.
+5. Selecciona visibilidad pública.
+6. Crea el repositorio.
+   - **Resultado esperado:** aparece un repositorio nuevo en la cuenta de la persona A.
+7. La persona A abre **Settings > Collaborators > Add people**.
+8. Invita a la persona B.
+9. La persona B acepta la invitación.
+   - **Resultado esperado:** ambas personas tienen acceso de escritura.
+10. En el repositorio del equipo, seleccionen **Code > Local > HTTPS**.
+11. Copien la dirección.
+12. En ambas computadoras, abran VS Code y presionen `Ctrl+Shift+P`.
+13. Ejecuten **Git: Clone**.
+14. Peguen la dirección del repositorio del equipo.
+15. Elijan una carpeta local.
+16. Seleccionen **Open** cuando VS Code lo solicite.
    - **Resultado esperado:** ves `README.md`, `proyecto-base`, `modulos` y `recursos`.
-10. Abre **Terminal > New Terminal**.
-11. Confirma el estado:
+17. Ambas personas abren **Terminal > New Terminal**.
+18. Confirmen el estado:
 
 ```powershell
 git status
@@ -111,15 +130,35 @@ git status
 
 - **Resultado esperado:** estás en `main` y no hay cambios pendientes.
 
-12. Confirma la conexión:
+19. Confirmen la conexión:
 
 ```powershell
 git remote -v
 ```
 
-- **Resultado esperado:** aparece `origin` con la dirección de GitHub.
+- **Resultado esperado:** `origin` apunta al repositorio del equipo, no a `github-essentials-workshop`.
 
-13. Consulta el historial:
+20. La persona A crea y publica `dev`:
+
+```powershell
+git switch -c dev
+git push -u origin dev
+git switch main
+```
+
+- **Resultado esperado:** `main` y `dev` aparecen en GitHub.
+
+21. La persona B actualiza sus referencias:
+
+```powershell
+git fetch origin
+git switch dev
+git switch main
+```
+
+- **Resultado esperado:** también puede cambiar entre `main` y `dev`.
+
+22. Consulten el historial:
 
 ```powershell
 git log --oneline -3
@@ -127,7 +166,7 @@ git log --oneline -3
 
 - **Resultado esperado:** aparecen hasta tres commits.
 
-14. Abre `proyecto-base/index.html` desde el explorador de Windows.
+23. Abran `proyecto-base/index.html` desde el explorador de Windows.
    - **Resultado esperado:** ves Contoso Retail en el navegador.
 
 ## Qué acabas de comprobar
@@ -141,7 +180,7 @@ git log --oneline -3
 
 ## Punto de control
 
-No avances hasta que `git status` funcione, `origin` aparezca y el sitio abra.
+No avancen hasta que ambos puedan acceder al repositorio, `origin` apunte al equipo, `dev` exista y el sitio abra.
 
 ---
 
@@ -155,23 +194,31 @@ Agregar productos con Copilot y comprender `add → commit → push`.
 
 1. Abre `proyecto-base/index.html`.
 2. Localiza `<div class="product-grid">`.
-3. Abre el Chat de Copilot.
-4. Envía:
+3. La persona A crea una rama con su nombre:
 
-> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
+```powershell
+git switch -c feature/nombre-apellido-catalogo
+```
 
-5. Revisa la propuesta antes de aplicarla.
+- **Resultado esperado:** una rama como `feature/ana-lopez-catalogo`. Sustituye el ejemplo por tu nombre real.
+
+4. La persona A abre el Chat de Copilot y la persona B revisa las propuestas.
+5. Envía:
+
+> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Usa las imágenes locales de `proyecto-base/assets`, repitiendo una cuando sea necesario. Cada tarjeta debe tener texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales, URLs externas ni estilos en línea.
+
+6. Revisa la propuesta antes de aplicarla.
    - **Resultado esperado:** seis elementos `article` sin marcas ni datos reales.
-6. Aplica las tarjetas dentro de `.product-grid`.
-7. Pide a Copilot:
+7. Aplica las tarjetas dentro de `.product-grid`.
+8. Pide a Copilot:
 
 > Genera CSS para `.product-card` y sus elementos usando las variables existentes. Mantén CSS puro, Grid adaptable, foco visible y contraste legible. No cambies las reglas existentes.
 
-8. Agrega la propuesta al final de `proyecto-base/styles.css`.
-9. Guarda ambos archivos.
-10. Actualiza el navegador.
+9. Agrega la propuesta al final de `proyecto-base/styles.css`.
+10. Guarda ambos archivos.
+11. Actualiza el navegador.
     - **Resultado esperado:** ves seis tarjetas organizadas en cuadrícula.
-11. Revisa qué cambió:
+12. Revisa qué cambió:
 
 ```powershell
 git status
@@ -180,13 +227,13 @@ git diff
 
 - **Resultado esperado:** sólo aparecen `index.html` y `styles.css`.
 
-12. Prepara los archivos:
+13. Prepara los archivos:
 
 ```powershell
 git add proyecto-base/index.html proyecto-base/styles.css
 ```
 
-13. Comprueba el staging:
+14. Comprueba el staging:
 
 ```powershell
 git status
@@ -195,7 +242,7 @@ git diff --staged
 
 - **Resultado esperado:** los dos archivos aparecen en **Changes to be committed**.
 
-14. Crea el commit:
+15. Crea el commit:
 
 ```powershell
 git commit -m "Agrega productos destacados a la tienda"
@@ -203,28 +250,17 @@ git commit -m "Agrega productos destacados a la tienda"
 
 - **Resultado esperado:** Git muestra un identificador corto y un resumen.
 
-15. Publica:
+16. Publica la rama:
 
 ```powershell
-git push
-```
-
-- **Resultado esperado:** el commit llega a GitHub o recibes un rechazo por rama protegida.
-
-## Si `main` está protegida
-
-No fuerces el push. Crea una rama desde el commit actual:
-
-```powershell
-git switch -c feature/catalogo-inicial
 git push -u origin HEAD
 ```
 
-Tu trabajo queda publicado en la rama feature y podrá entrar mediante Pull Request.
+- **Resultado esperado:** el commit aparece en GitHub dentro de una rama con el nombre de la persona A.
 
 ## Punto de control
 
-El sitio muestra productos, el commit existe y `git status` está limpio.
+El sitio muestra productos, el commit está publicado en `feature/nombre-apellido-catalogo` y `git status` está limpio.
 
 ---
 
@@ -232,12 +268,12 @@ El sitio muestra productos, el commit existe y `git status` está limpio.
 
 ## Meta
 
-Agregar categorías en una rama de corta duración.
+Comprender la rama personal, agregar categorías e integrar el catálogo a `dev`.
 
 ## Modelo de ramas
 
 ```text
-feature/categorias → dev → main → producción
+feature/nombre-apellido-catalogo → dev → main → producción
 ```
 
 - `feature/...`: una mejora concreta.
@@ -253,20 +289,29 @@ git status
 git branch --show-current
 ```
 
-2. Si todavía estás en `main`, crea tu rama:
-
-```powershell
-git switch -c feature/categorias
-```
-
-3. Si ya creaste `feature/catalogo-inicial`, puedes continuar ahí o usar el nombre indicado por el instructor.
-4. Confirma:
+2. Confirma que la rama contiene el nombre de la persona A:
 
 ```powershell
 git branch --show-current
 ```
 
-- **Resultado esperado:** aparece `feature/...`.
+- **Resultado esperado:** algo como `feature/ana-lopez-catalogo`.
+
+3. Cambia a `main` para comprobar que el trabajo está aislado:
+
+```powershell
+git switch main
+```
+
+- **Resultado esperado:** los productos todavía no están en `main`.
+
+4. Regresa a la rama personal usando el nombre real creado en el bloque 2:
+
+```powershell
+git switch feature/nombre-apellido-catalogo
+```
+
+- **Resultado esperado:** vuelven los productos.
 
 5. Abre la sección `#categorias` en `index.html`.
 6. Pide a Copilot:
@@ -293,17 +338,29 @@ git add proyecto-base/index.html proyecto-base/styles.css
 git commit -m "Agrega navegación por categorías"
 ```
 
-11. Publica la rama:
+11. Publica el nuevo commit:
 
 ```powershell
-git push -u origin HEAD
+git push
 ```
 
-- **Resultado esperado:** GitHub muestra la nueva rama.
+- **Resultado esperado:** GitHub actualiza la rama.
+
+12. Abre un Pull Request desde la rama personal hacia `dev`.
+13. La persona B revisa que sólo contenga productos y categorías.
+14. La persona B integra el PR.
+15. Ambas personas actualizan `dev`:
+
+```powershell
+git switch dev
+git pull --ff-only
+```
+
+- **Resultado esperado:** ambos ven el catálogo completo en `dev`.
 
 ## Punto de control
 
-Estás en una rama `feature/...`, la rama aparece en GitHub y `git status` está limpio.
+El catálogo está integrado en `dev`, ambas copias están actualizadas y la rama identifica a su autor.
 
 ---
 
@@ -317,15 +374,15 @@ Crear dos mejoras en paralelo e integrar el trabajo reciente de `dev`.
 
 - **Persona A:** banner promocional.
 - **Persona B:** mejora del pie de página.
-- **Persona C, si existe:** revisa historial y coordina el orden.
-
 ## Preparar la rama de la persona A
 
 ```powershell
 git switch dev
 git pull --ff-only
-git switch -c feature/banner-promocional
+git switch -c feature/nombre-a-apellido-banner
 ```
+
+Sustituye el marcador por el nombre real de A, por ejemplo `feature/ana-lopez-banner`.
 
 Pide a Copilot:
 
@@ -346,8 +403,10 @@ git push -u origin HEAD
 ```powershell
 git switch dev
 git pull --ff-only
-git switch -c feature/mejora-footer
+git switch -c feature/nombre-b-apellido-footer
 ```
+
+Sustituye el marcador por el nombre real de B, por ejemplo `feature/luis-perez-footer`.
 
 Pide a Copilot:
 
@@ -365,14 +424,14 @@ git push -u origin HEAD
 
 ## Actualizar la rama de B después de integrar A
 
-Cuando el instructor confirme que el cambio de A llegó a `dev`, la persona B ejecuta:
+La persona A abre un PR hacia `dev`; la persona B lo revisa e integra. Después, la persona B ejecuta:
 
 ```powershell
 git fetch origin
 git log --oneline --all --graph --decorate -10
 git switch dev
 git pull --ff-only
-git switch feature/mejora-footer
+git switch feature/nombre-b-apellido-footer
 git merge dev
 git push
 ```
@@ -402,8 +461,10 @@ Crear un conflicto real sobre el mismo encabezado y resolverlo de forma controla
 ```powershell
 git switch dev
 git pull --ff-only
-git switch -c feature/mensaje-banner-a
+git switch -c feature/nombre-a-apellido-mensaje-banner
 ```
+
+Usa el nombre real de A, por ejemplo `feature/ana-lopez-mensaje-banner`.
 
 Pide a Copilot:
 
@@ -424,8 +485,10 @@ La persona B parte de la misma versión de `dev`:
 ```powershell
 git switch dev
 git pull --ff-only
-git switch -c feature/mensaje-banner-b
+git switch -c feature/nombre-b-apellido-mensaje-banner
 ```
+
+Usa el nombre real de B, por ejemplo `feature/luis-perez-mensaje-banner`.
 
 Pide a Copilot:
 
@@ -441,7 +504,7 @@ git push -u origin HEAD
 
 ## Provocar el conflicto
 
-1. El instructor integra primero la rama A a `dev`.
+1. La persona A abre un PR y la persona B integra primero la rama A a `dev`.
 2. La persona B actualiza `dev`:
 
 ```powershell
@@ -453,7 +516,7 @@ git pull --ff-only
 3. La persona B regresa a su rama:
 
 ```powershell
-git switch feature/mensaje-banner-b
+git switch feature/nombre-b-apellido-mensaje-banner
 ```
 
 4. Integra `dev`:
@@ -594,20 +657,23 @@ Identificar en qué compuerta está un cambio y explicar una falla con evidencia
 
 ## Recorrido
 
-1. Abre el PR preparado de `dev` hacia `main`.
+1. La persona A abre un PR desde `dev` hacia `main` en el repositorio del equipo.
 2. Confirma:
    - **base:** `main`;
    - **compare:** `dev`.
-3. Abre **Checks**.
+3. La persona B abre **Checks**.
 4. Identifica el estado:
    - pendiente;
    - correcto;
    - fallido;
    - esperando aprobación.
-5. Abre una validación.
+5. Abre **Validar repositorio**.
 6. Si falló, busca la primera línea que explica la causa.
-7. Abre `[AJUSTAR: panel del ambiente]`.
-8. Identifica la versión desplegada.
+7. Cuando esté en verde, la persona B aprueba e integra el PR.
+8. Abre **Actions > Publicar Contoso Retail en GitHub Pages**.
+9. Espera a que termine en verde.
+10. Abre la URL mostrada por el despliegue.
+    - **Resultado esperado:** Contoso Retail está publicado desde el repositorio del equipo.
 
 ## Diagnóstico mínimo
 
@@ -680,7 +746,7 @@ git pull --ff-only
 2. Creen una rama:
 
 ```powershell
-git switch -c feature/nombre-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 ```
 
 3. Pidan a Copilot el HTML y CSS.
@@ -738,8 +804,8 @@ git push
     - por qué;
     - cómo lo validaron;
     - riesgos conocidos.
-15. Soliciten revisión a otro equipo.
-16. Revisen el PR de otro equipo.
+15. Soliciten revisión a su compañero.
+16. Revisen el PR de su compañero.
 17. Respondan comentarios.
 18. Comprueben checks.
 19. Completen el merge cuando las reglas lo permitan.

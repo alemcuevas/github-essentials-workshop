@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Producto de despensa</title>
+  <desc id="desc">Ilustración abstracta de una bolsa de alimentos sobre un fondo verde</desc>
+  <rect width="640" height="420" rx="32" fill="#e7f7ee"/>
+  <path d="M225 145h190l-20 200H245z" fill="#2457c5"/>
+  <path d="M265 145c0-44 110-44 110 0" fill="none" stroke="#173b88" stroke-width="20"/>
+  <circle cx="320" cy="245" r="48" fill="#ffd166"/>
+  <path d="M298 245l15 15 31-35" fill="none" stroke="#173b88" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

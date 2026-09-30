@@ -16,7 +16,7 @@ Este reto reúne todo el taller. Imagina una línea de producción: una idea ent
 
 La meta no es crear la tienda más grande. La meta es demostrar control: saber en qué rama estás, revisar lo generado por Copilot, mantener pequeño el cambio, no subir información sensible y usar evidencia cuando algo falla.
 
-Trabajen en parejas o equipos de 3. Rótense como **conductor**, quien usa el teclado; **navegante**, quien lee el módulo y anticipa el siguiente paso; y **revisor**, quien comprueba el diff y el PR. Si son dos, alternen conductor y navegante; ambos revisan.
+Trabajen en la misma pareja de todo el taller. Una persona será **conductora** y usará el teclado; la otra será **navegante** y anticipará el siguiente paso. Ambas revisarán el diff y el PR. Cambien de rol a la mitad del reto.
 
 ## 4. Manos a la obra
 
@@ -41,10 +41,10 @@ git pull --ff-only
 5. Creen una rama con nombre descriptivo:
 
 ```powershell
-git switch -c feature/nombre-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 ```
 
-   - **Qué debes ver:** una nueva rama `feature/...`.
+   - **Qué debes ver:** una rama como `feature/ana-lopez-beneficios`.
 6. Pidan a Copilot el HTML y CSS de la mejora.
    - **Qué debes ver:** una propuesta sin JavaScript, dependencias, marcas ni datos reales.
 7. Revisen el código antes de aceptarlo.
@@ -97,9 +97,9 @@ git push
    - **Qué debes ver:** rama actualizada y sitio funcional.
 15. Abran un PR desde su rama hacia `dev`.
    - **Qué debes ver:** título, descripción, pasos de validación y cambios esperados.
-16. Soliciten revisión a otro equipo.
-   - **Qué debes ver:** una persona revisora asignada.
-17. Revisen el PR que recibieron y dejen un comentario útil o una aprobación justificada.
+16. Soliciten revisión a su compañero.
+   - **Qué debes ver:** el otro integrante aparece como persona revisora.
+17. Revisen el PR de su compañero y dejen un comentario útil o una aprobación justificada.
    - **Qué debes ver:** evidencia de revisión humana.
 18. Respondan comentarios y publiquen un ajuste si se solicita.
    - **Qué debes ver:** conversación resuelta y, si aplica, un commit adicional.

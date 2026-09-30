@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Producto de electrónica</title>
+  <desc id="desc">Ilustración abstracta de audífonos sobre un fondo azul</desc>
+  <rect width="640" height="420" rx="32" fill="#e8efff"/>
+  <path d="M210 220v-34c0-61 49-110 110-110s110 49 110 110v34" fill="none" stroke="#2457c5" stroke-width="28" stroke-linecap="round"/>
+  <rect x="172" y="205" width="80" height="132" rx="34" fill="#173b88"/>
+  <rect x="388" y="205" width="80" height="132" rx="34" fill="#173b88"/>
+  <circle cx="320" cy="210" r="28" fill="#ffd166"/>
+</svg>

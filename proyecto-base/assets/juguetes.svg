@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Producto de juguetes</title>
+  <desc id="desc">Ilustración abstracta de bloques de juguete sobre un fondo violeta</desc>
+  <rect width="640" height="420" rx="32" fill="#efeaff"/>
+  <rect x="175" y="210" width="145" height="125" rx="16" fill="#2457c5"/>
+  <rect x="320" y="145" width="145" height="190" rx="16" fill="#173b88"/>
+  <circle cx="220" cy="210" r="18" fill="#ffd166"/>
+  <circle cx="275" cy="210" r="18" fill="#ffd166"/>
+  <circle cx="365" cy="145" r="18" fill="#ffd166"/>
+  <circle cx="420" cy="145" r="18" fill="#ffd166"/>
+</svg>

@@ -22,7 +22,7 @@ Ejecuta los comandos dentro de la carpeta del repositorio. Antes de una operaci√
 | `git push` | Publica commits en la rama remota asociada | Despu√©s de commits locales | **Sync Changes** o **Push** |
 | `git push -u origin HEAD` | Publica la rama actual y configura seguimiento | La primera vez que publicas una rama | **Publish Branch** |
 | `git switch nombre` | Cambia a una rama existente | Para moverte entre `dev` y una rama feature | Clic en el nombre de rama y seleccionar |
-| `git switch -c feature/nombre` | Crea una rama y cambia a ella | Al iniciar una mejora desde una base actualizada | **Git: Create Branch** |
+| `git switch -c feature/tu-nombre-apellido-descripcion` | Crea una rama personal y cambia a ella | Al iniciar una mejora desde una base actualizada | **Git: Create Branch** |
 | `git branch -vv` | Muestra ramas locales y sus ramas remotas asociadas | Para diagnosticar seguimiento | No hay equivalente exacto |
 | `git merge dev` | Integra `dev` en la rama actual | Para actualizar tu feature antes del PR | **Git: Merge Branch** |
 | `git merge origin/dev` | Integra tu referencia m√°s reciente de `dev` remoto | Despu√©s de `fetch`, sin cambiar de rama | **Git: Merge Branch** y elegir `origin/dev` |
@@ -35,7 +35,7 @@ Ejecuta los comandos dentro de la carpeta del repositorio. Antes de una operaci√
 ```powershell
 git switch dev
 git pull --ff-only
-git switch -c feature/nombre-breve
+git switch -c feature/tu-nombre-apellido-descripcion
 ```
 
 ### Revisar y registrar

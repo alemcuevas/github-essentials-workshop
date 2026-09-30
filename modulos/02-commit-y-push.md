@@ -24,68 +24,75 @@ Copilot puede generar HTML, explicar diferencias y sugerir un mensaje. Tu respon
 
 1. Abre `proyecto-base/index.html` en VS Code.
    - **Qué debes ver:** un contenedor `<div class="product-grid">` vacío.
-2. Abre el Chat de Copilot.
+2. La persona A crea una rama que incluya su nombre:
+
+```powershell
+git switch -c feature/nombre-apellido-catalogo
+```
+
+   - **Qué debes ver:** una rama como `feature/ana-lopez-catalogo`. Sustituye el ejemplo por tu nombre real, en minúsculas y sin acentos.
+3. La persona A abre el Chat de Copilot mientras la persona B revisa cada propuesta.
    - **Qué debes ver:** el campo para escribir una solicitud.
-3. Usa el prompt de este módulo y aplica la propuesta dentro de `product-grid`.
+4. Usa el prompt de este módulo y aplica la propuesta dentro de `product-grid`.
    - **Qué debes ver:** seis elementos `<article class="product-card">` con imagen, nombre, precio y enlace o botón.
-4. Revisa que los productos y las imágenes sean genéricos y no incluyan marcas reales.
+5. Revisa que los productos y las imágenes sean genéricos y no incluyan marcas reales.
    - **Qué debes ver:** productos como audífonos, lámpara, mochila o juego de mesa con textos ficticios.
-5. Pide a Copilot los estilos de las clases nuevas y aplícalos al final de `proyecto-base/styles.css`.
+6. Pide a Copilot los estilos de las clases nuevas y aplícalos al final de `proyecto-base/styles.css`.
    - **Qué debes ver:** reglas para tarjeta, imagen, precio y acción.
-6. Guarda ambos archivos.
+7. Guarda ambos archivos.
    - **Qué debes ver:** desaparece el punto de cambios sin guardar en las pestañas.
-7. Actualiza el navegador.
+8. Actualiza el navegador.
    - **Qué debes ver:** una cuadrícula de seis tarjetas legibles.
-8. Ejecuta:
+9. Ejecuta:
 
 ```powershell
 git status
 ```
 
    - **Qué debes ver:** `index.html` y `styles.css` aparecen como modificados y todavía no preparados.
-9. Ejecuta:
+10. Ejecuta:
 
 ```powershell
 git diff
 ```
 
    - **Qué debes ver:** líneas agregadas con `+`; revisa que no haya datos o archivos inesperados.
-10. Prepara sólo los dos archivos:
+11. Prepara sólo los dos archivos:
 
 ```powershell
 git add proyecto-base/index.html proyecto-base/styles.css
 ```
 
    - **Qué debes ver:** el comando termina sin error.
-11. Ejecuta:
+12. Ejecuta:
 
 ```powershell
 git status
 ```
 
    - **Qué debes ver:** ambos archivos aparecen bajo **Changes to be committed**.
-12. Crea el commit:
+13. Crea el commit:
 
 ```powershell
 git commit -m "Agrega productos destacados a la tienda"
 ```
 
    - **Qué debes ver:** un identificador corto y un resumen de líneas modificadas.
-13. Publica el commit:
+14. Publica por primera vez la rama personal:
 
 ```powershell
-git push
+git push -u origin HEAD
 ```
 
-   - **Qué debes ver:** una confirmación de envío o un mensaje del instructor si `main` está protegida.
-14. Abre el repositorio en GitHub y selecciona el historial de commits.
-   - **Qué debes ver:** el mensaje `Agrega productos destacados a la tienda`, si la política permitió el push.
+   - **Qué debes ver:** GitHub recibe una rama como `feature/ana-lopez-catalogo`.
+15. Abre la rama en el repositorio del equipo y selecciona su historial.
+   - **Qué debes ver:** el mensaje `Agrega productos destacados a la tienda`.
 
 ## 5. Prompt sugerido para Copilot
 
 > **Prompt para Copilot**
 >
-> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
+> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Usa las imágenes locales de `proyecto-base/assets`, repitiendo una cuando sea necesario. Cada tarjeta debe tener texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales, URLs externas ni estilos en línea.
 
 > **Prompt para Copilot**
 >
@@ -93,12 +100,12 @@ git push
 
 ## 6. Punto de control
 
-El sitio muestra seis tarjetas, `git status` está limpio y el commit aparece en el historial local. Si el push fue permitido, también aparece en GitHub; si fue rechazado por protección, conserva el commit local para moverlo a una rama en el siguiente bloque.
+El sitio muestra seis tarjetas, `git status` está limpio y el commit aparece en GitHub dentro de una rama `feature/nombre-apellido-catalogo`.
 
 ## 7. Si algo falla
 
 - **`nothing to commit`:** confirma que guardaste los archivos y ejecuta `git status`.
-- **El push es rechazado por rama protegida:** no fuerces el envío. Continúa al bloque 3 para crear una rama y publicar desde ella.
+- **La rama no contiene tu nombre:** no crees otra sin revisar; pide al mentor ayudarte a renombrarla antes de continuar.
 - **Las tarjetas no tienen estilo:** verifica que `index.html` enlaza `styles.css` y que las clases generadas coinciden exactamente.
 
 ## 8. Para profundizar

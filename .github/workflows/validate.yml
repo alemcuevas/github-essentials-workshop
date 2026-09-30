@@ -1,0 +1,94 @@
+name: Validar material del taller
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validar repositorio
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar archivos requeridos
+        shell: bash
+        run: |
+          test -f proyecto-base/index.html
+          test -f proyecto-base/styles.css
+          test -f README.md
+          test -f GUIA-DEL-ESTUDIANTE.md
+
+      - name: Comprobar alcance tecnológico
+        shell: bash
+        run: |
+          if find . -path ./.git -prune -o \( -name '*.js' -o -name 'package.json' -o -name 'package-lock.json' \) -print | grep -q .; then
+            echo "El proyecto del taller sólo permite HTML y CSS."
+            exit 1
+          fi
+
+      - name: Buscar marcadores de conflicto
+        shell: bash
+        run: |
+          if git grep -n -E '<{7}|={7}|>{7}' -- proyecto-base; then
+            echo "Hay marcadores de conflicto sin resolver."
+            exit 1
+          fi
+
+      - name: Comprobar marca del sitio
+        shell: bash
+        run: |
+          grep -q "Contoso Retail" proyecto-base/index.html
+
+      - name: Analizar HTML
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class WorkshopHTMLParser(HTMLParser):
+              pass
+
+          content = Path("proyecto-base/index.html").read_text(encoding="utf-8")
+          WorkshopHTMLParser().feed(content)
+          print("HTML analizado correctamente")
+          PY
+
+      - name: Validar enlaces Markdown relativos
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path(".").resolve()
+          errors = []
+
+          for document in root.rglob("*.md"):
+              text = document.read_text(encoding="utf-8")
+              for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
+                  if target.startswith(("http://", "https://", "#", "mailto:")):
+                      continue
+                  if "[AJUSTAR:" in target:
+                      continue
+                  path = target.split("#", 1)[0]
+                  if path and not (document.parent / path).resolve().exists():
+                      errors.append(f"{document.relative_to(root)} -> {target}")
+
+          if errors:
+              raise SystemExit("Enlaces rotos:\n" + "\n".join(errors))
+
+          print("Enlaces Markdown válidos")
+          PY

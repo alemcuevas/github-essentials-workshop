@@ -2,7 +2,7 @@
 
 ## 1. Objetivo del bloque
 
-Crear y publicar una rama de corta duración para desarrollar la sección de categorías sin trabajar directamente en `main`.
+Comprender la rama personal creada en el bloque anterior, agregar categorías e integrarla a `dev`.
 
 ## 2. Qué vas a lograr aquí
 
@@ -22,7 +22,7 @@ Usaremos tres escalones:
 
 El recorrido es `feature → dev → main`. Nunca trabajamos directo sobre `main` porque saltaríamos el aislamiento, la revisión y las validaciones. Una **rama protegida** es una regla de GitHub que bloquea acciones como el push directo y obliga a usar Pull Requests. Ese rechazo es una protección, no una falla del sistema.
 
-Una rama debe tener un propósito claro y una vida corta. `feature/categorias` comunica mejor que `rama-ale-2`.
+Una rama debe tener un propósito claro, una vida corta y una persona responsable. Usaremos `feature/nombre-apellido-descripcion`, por ejemplo `feature/ana-lopez-catalogo`.
 
 ## 4. Manos a la obra
 
@@ -33,27 +33,27 @@ git status
 ```
 
    - **Qué debes ver:** la rama actual y si tu directorio está limpio.
-2. Si el commit del bloque anterior quedó sólo en `main` local, crea la rama desde ese punto:
+2. Confirma que la rama contiene tu nombre y el propósito `catalogo`:
 
 ```powershell
-git switch -c feature/catalogo-inicial
+git branch --show-current
 ```
 
-   - **Qué debes ver:** `Switched to a new branch`.
-3. Si el commit anterior ya llegó a GitHub, actualiza primero las referencias:
+   - **Qué debes ver:** un nombre como `feature/ana-lopez-catalogo`.
+3. Cambia temporalmente a `main`:
 
 ```powershell
-git fetch origin
+git switch main
 ```
 
-   - **Qué debes ver:** el comando termina sin error; no modifica tus archivos.
-4. Crea o cambia a la rama de trabajo cuando todavía no exista:
+   - **Qué debes ver:** el catálogo todavía no está en `main`; sólo existe en la rama personal.
+4. Regresa a tu rama usando su nombre real:
 
 ```powershell
-git switch -c feature/categorias
+git switch feature/nombre-apellido-catalogo
 ```
 
-   - **Qué debes ver:** tu terminal confirma la nueva rama. Usa `feature/catalogo-inicial` si ya la creaste en el paso 2.
+   - **Qué debes ver:** vuelven los productos del bloque 2.
 5. Confirma la rama:
 
 ```powershell
@@ -84,15 +84,25 @@ git commit -m "Agrega navegación por categorías"
 ```
 
    - **Qué debes ver:** un nuevo commit en tu rama.
-12. Publica y conecta la rama:
+12. Publica el nuevo commit:
 
 ```powershell
-git push -u origin HEAD
+git push
 ```
 
-   - **Qué debes ver:** GitHub recibe la rama y Git configura su seguimiento.
-13. Abre la lista de ramas en GitHub.
-   - **Qué debes ver:** tu rama `feature/...` además de `dev` y `main`.
+   - **Qué debes ver:** GitHub actualiza tu rama personal.
+13. Abre un Pull Request desde tu rama hacia `dev`; el instructor sólo mostrará los clics y explicará la revisión con detalle en el bloque 6.
+   - **Qué debes ver:** la base es `dev` y la comparación es tu rama.
+14. La persona B revisa que el PR sólo contenga productos y categorías, y selecciona **Merge pull request**.
+   - **Qué debes ver:** el cambio queda integrado a `dev`.
+15. Ambas personas actualizan `dev`:
+
+```powershell
+git switch dev
+git pull --ff-only
+```
+
+   - **Qué debes ver:** productos y categorías aparecen en `dev` en las dos computadoras.
 
 ## 5. Prompt sugerido para Copilot
 
@@ -106,12 +116,12 @@ git push -u origin HEAD
 
 ## 6. Punto de control
 
-`git branch --show-current` muestra una rama `feature/...`, `git status` está limpio, la sección de categorías funciona y la rama aparece en GitHub.
+El primer cambio está integrado en `dev`, ambas personas lo ven y la rama de origen identifica a su autor.
 
 ## 7. Si algo falla
 
-- **La rama ya existe:** ejecuta `git switch nombre-de-la-rama` en vez de `git switch -c`.
-- **Publicaste una rama con otro nombre:** no la fuerces ni la borres durante el ejercicio; informa al instructor y usa ese nombre de forma consistente.
+- **Escribiste literalmente `nombre-apellido`:** detente y pide apoyo para renombrar la rama antes de abrir el PR.
+- **El PR apunta a `main`:** edítalo y cambia la base a `dev` antes de integrarlo.
 - **El push pide upstream:** ejecuta `git push -u origin HEAD`.
 
 ## 8. Para profundizar

@@ -28,7 +28,7 @@ La persona autora responde comentarios, ajusta si es necesario y vuelve a public
 git branch --show-current
 ```
 
-   - **Qué debes ver:** `feature/mensaje-banner-b` o la rama indicada por el instructor.
+   - **Qué debes ver:** la rama de B, por ejemplo `feature/luis-perez-mensaje-banner`.
 2. Confirma que todo está publicado:
 
 ```powershell
@@ -73,7 +73,7 @@ git push
 16. La persona revisora vuelve a comprobar **Files changed** y selecciona **Review changes > Approve**.
    - **Qué debes ver:** una aprobación en el PR.
 17. Confirma que las validaciones estén correctas.
-   - **Qué debes ver:** indicadores verdes o el estado definido en `[AJUSTAR: validación del repositorio]`.
+   - **Qué debes ver:** el check **Validar repositorio** en verde.
 18. Selecciona el método de merge indicado por el instructor.
    - **Qué debes ver:** GitHub confirma que el PR se integró a `dev`.
 19. Actualiza tu `dev` local:

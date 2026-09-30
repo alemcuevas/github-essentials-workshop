@@ -41,17 +41,17 @@ git pull --ff-only
 2. La persona A crea:
 
 ```powershell
-git switch -c feature/mensaje-banner-a
+git switch -c feature/nombre-a-apellido-mensaje-banner
 ```
 
-   - **Qué debes ver:** la nueva rama de A.
+   - **Qué debes ver:** una rama como `feature/ana-lopez-mensaje-banner`.
 3. La persona B parte también de `dev` actualizada en su copia y crea:
 
 ```powershell
-git switch -c feature/mensaje-banner-b
+git switch -c feature/nombre-b-apellido-mensaje-banner
 ```
 
-   - **Qué debes ver:** la nueva rama de B.
+   - **Qué debes ver:** una rama como `feature/luis-perez-mensaje-banner`.
 4. Ambas personas localizan el mismo `<h1 id="hero-title">` en `proyecto-base/index.html`.
    - **Qué debes ver:** la frase actual del banner.
 5. La persona A pide a Copilot una frase breve orientada al hogar y reemplaza únicamente el contenido del `h1`.
@@ -67,7 +67,7 @@ git push -u origin HEAD
 ```
 
    - **Qué debes ver:** las dos ramas publicadas con frases diferentes.
-8. El instructor integra primero `feature/mensaje-banner-a` a `dev`.
+8. La persona A abre un PR; la persona B lo revisa e integra primero la rama de A a `dev`.
    - **Qué debes ver:** la frase de A aparece en `dev`.
 9. La persona B consulta y actualiza `dev`:
 
@@ -81,10 +81,10 @@ git pull --ff-only
 10. La persona B regresa a su rama:
 
 ```powershell
-git switch feature/mensaje-banner-b
+git switch feature/nombre-b-apellido-mensaje-banner
 ```
 
-   - **Qué debes ver:** el `h1` vuelve a mostrar la frase de B.
+   - **Qué debes ver:** el `h1` vuelve a mostrar la frase de B. Usa el nombre real de su rama.
 11. La persona B intenta integrar `dev`:
 
 ```powershell

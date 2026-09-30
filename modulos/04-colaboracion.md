@@ -6,7 +6,7 @@ Coordinar dos cambios en paralelo y actualizar una rama antes de integrarla.
 
 ## 2. Qué vas a lograr aquí
 
-- Trabajarás en pareja o equipo de 3 sin compartir una misma rama.
+- Trabajarás con tu compañero sin compartir una misma rama.
 - Distinguirás `fetch`, `pull` y `merge`.
 - Integrarás cambios recientes de `dev` en tu rama.
 
@@ -22,8 +22,8 @@ No confundas “ver el trabajo de otra persona” con “editar su rama”. Cada
 
 ## 4. Manos a la obra
 
-1. Formen parejas o equipos de 3 y asignen roles A, B y, si aplica, C.
-   - **Qué debes ver:** cada persona conoce su cambio y su turno al teclado.
+1. Confirmen los roles A y B asignados en el bloque 1.
+   - **Qué debes ver:** cada persona conoce su cambio y trabaja desde su propia computadora.
 2. La persona A cambia a `dev`:
 
 ```powershell
@@ -41,19 +41,19 @@ git pull --ff-only
 4. La persona A crea su rama:
 
 ```powershell
-git switch -c feature/banner-promocional
+git switch -c feature/nombre-a-apellido-banner
 ```
 
-   - **Qué debes ver:** una nueva rama.
+   - **Qué debes ver:** una rama como `feature/ana-lopez-banner`, con el nombre real de A.
 5. La persona B repite los pasos 2 y 3 en su equipo.
    - **Qué debes ver:** su rama `dev` local está actualizada.
 6. La persona B crea su rama:
 
 ```powershell
-git switch -c feature/mejora-footer
+git switch -c feature/nombre-b-apellido-footer
 ```
 
-   - **Qué debes ver:** una rama distinta a la de A.
+   - **Qué debes ver:** una rama como `feature/luis-perez-footer`, con el nombre real de B.
 7. La persona A usa Copilot para agregar una franja promocional debajo del encabezado.
    - **Qué debes ver:** un bloque HTML y sus estilos sin JavaScript.
 8. La persona B usa Copilot para mejorar el pie de página con navegación y texto de ayuda.
@@ -67,7 +67,7 @@ git push -u origin HEAD
 ```
 
    - **Qué debes ver:** ambas ramas en GitHub.
-11. El instructor integra la rama de A a `dev` mediante el flujo indicado.
+11. La persona A abre un PR hacia `dev`; la persona B lo revisa y lo integra.
    - **Qué debes ver:** el commit de A aparece en `dev` en GitHub.
 12. La persona B consulta cambios sin mezclarlos:
 
@@ -94,10 +94,10 @@ git pull --ff-only
 15. La persona B regresa a su rama:
 
 ```powershell
-git switch feature/mejora-footer
+git switch feature/nombre-b-apellido-footer
 ```
 
-   - **Qué debes ver:** su mejora vuelve a ser la rama actual.
+   - **Qué debes ver:** su mejora vuelve a ser la rama actual. Usa el nombre real creado en el paso 6.
 16. La persona B integra `dev`:
 
 ```powershell
@@ -131,7 +131,7 @@ La rama de B contiene su mejora y el cambio de A, `git status` está limpio y el
 
 - **`pull --ff-only` es rechazado:** tu rama local y la remota se separaron. Detente y pide al mentor revisar el historial; no uses force push.
 - **No aparece la rama de otra persona:** ejecuta `git fetch origin` y revisa el nombre exacto en GitHub.
-- **Editaste en `dev`:** no hagas commit todavía; guarda el archivo, crea una rama con `git switch -c feature/nombre` y luego registra el cambio.
+- **Editaste en `dev`:** no hagas commit todavía; crea `feature/tu-nombre-apellido-descripcion` y luego registra el cambio.
 
 ## 8. Para profundizar
 
