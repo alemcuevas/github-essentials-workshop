@@ -259,10 +259,11 @@ Confirma que ningún equipo tenga `unmerged paths` en `git status`.
 
 **Qué demostrar**
 
-1. Abre **Actions** y el workflow **Validar material del taller**.
-2. Muestra estados pendiente, correcto y fallido.
-3. Abre un registro y localiza la primera causa útil.
-4. Abre el workflow **Publicar Contoso Retail en GitHub Pages** y la URL de Pages del repositorio de ejemplo.
+1. Muestra **Settings > Pages > Source: GitHub Actions** en el repositorio de ejemplo.
+2. Abre **Actions** y el workflow **Validar material del taller**.
+3. Muestra estados pendiente, correcto y fallido.
+4. Abre un registro y localiza la primera causa útil.
+5. Abre el workflow **Publicar Contoso Retail en GitHub Pages** y la URL de Pages del repositorio de ejemplo.
 
 **Pregunta frecuente:** “¿Dónde está producción?”  
 **Respuesta:** en el taller, producción es la URL de GitHub Pages del repositorio del equipo. En una organización real, el destino y sus permisos pueden cambiar.

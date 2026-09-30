@@ -657,22 +657,25 @@ Identificar en qué compuerta está un cambio y explicar una falla con evidencia
 
 ## Recorrido
 
-1. La persona A abre un PR desde `dev` hacia `main` en el repositorio del equipo.
-2. Confirma:
+1. La persona propietaria abre **Settings > Pages**.
+2. En **Build and deployment > Source**, selecciona **GitHub Actions**.
+   - **Resultado esperado:** Pages queda habilitado.
+3. La persona A abre un PR desde `dev` hacia `main` en el repositorio del equipo.
+4. Confirma:
    - **base:** `main`;
    - **compare:** `dev`.
-3. La persona B abre **Checks**.
-4. Identifica el estado:
+5. La persona B abre **Checks**.
+6. Identifica el estado:
    - pendiente;
    - correcto;
    - fallido;
    - esperando aprobación.
-5. Abre **Validar repositorio**.
-6. Si falló, busca la primera línea que explica la causa.
-7. Cuando esté en verde, la persona B aprueba e integra el PR.
-8. Abre **Actions > Publicar Contoso Retail en GitHub Pages**.
-9. Espera a que termine en verde.
-10. Abre la URL mostrada por el despliegue.
+7. Abre **Validar repositorio**.
+8. Si falló, busca la primera línea que explica la causa.
+9. Cuando esté en verde, la persona B aprueba e integra el PR.
+10. Abre **Actions > Publicar Contoso Retail en GitHub Pages**.
+11. Espera a que termine en verde.
+12. Abre la URL mostrada por el despliegue.
     - **Resultado esperado:** Contoso Retail está publicado desde el repositorio del equipo.
 
 ## Diagnóstico mínimo
