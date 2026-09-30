@@ -28,16 +28,16 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Preparar sitio
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: proyecto-base
 
       - name: Publicar sitio
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
