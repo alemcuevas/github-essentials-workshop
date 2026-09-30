@@ -2,7 +2,7 @@
 
 Esta guía contiene el paso a paso completo para terminar el taller de GitHub. Puedes seguirla durante la sesión o usarla para retomar el ejercicio por tu cuenta.
 
-Construirás **Mercado Nube**, una tienda ficticia hecha únicamente con HTML y CSS. GitHub Copilot te ayudará a generar código; tú controlarás el flujo de Git y GitHub.
+Construirás **Contoso Retail**, una tienda ficticia hecha únicamente con HTML y CSS. GitHub Copilot te ayudará a generar código; tú controlarás el flujo de Git y GitHub.
 
 ## Resultado final
 
@@ -128,7 +128,7 @@ git log --oneline -3
 - **Resultado esperado:** aparecen hasta tres commits.
 
 14. Abre `proyecto-base/index.html` desde el explorador de Windows.
-   - **Resultado esperado:** ves Mercado Nube en el navegador.
+   - **Resultado esperado:** ves Contoso Retail en el navegador.
 
 ## Qué acabas de comprobar
 
@@ -158,7 +158,7 @@ Agregar productos con Copilot y comprender `add → commit → push`.
 3. Abre el Chat de Copilot.
 4. Envía:
 
-> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Mercado Nube. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
+> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
 
 5. Revisa la propuesta antes de aplicarla.
    - **Resultado esperado:** seis elementos `article` sin marcas ni datos reales.
@@ -275,7 +275,7 @@ git branch --show-current
 
 7. Pide los estilos:
 
-> Crea estilos adaptables para la lista de categorías usando CSS Grid y las variables ya definidas. Conserva la apariencia de Mercado Nube y agrega estados `hover` y `focus-visible`.
+> Crea estilos adaptables para la lista de categorías usando CSS Grid y las variables ya definidas. Conserva la apariencia de Contoso Retail y agrega estados `hover` y `focus-visible`.
 
 8. Guarda y actualiza el navegador.
    - **Resultado esperado:** aparecen cinco categorías.
@@ -329,7 +329,7 @@ git switch -c feature/banner-promocional
 
 Pide a Copilot:
 
-> Agrega debajo de `.site-header` una franja semántica de promoción para Mercado Nube con el texto “Envío sin costo en compras participantes”. Incluye un enlace a `#productos`. Genera HTML y CSS puro, accesible y adaptable. No uses JavaScript ni marcas reales.
+> Agrega debajo de `.site-header` una franja semántica de promoción para Contoso Retail con el texto “Envío sin costo en compras participantes”. Incluye un enlace a `#productos`. Genera HTML y CSS puro, accesible y adaptable. No uses JavaScript ni marcas reales.
 
 Revisa, prueba y publica:
 

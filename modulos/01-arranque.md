@@ -66,7 +66,7 @@ git log --oneline -3
 
    - **Qué debes ver:** hasta tres commits con identificador corto y mensaje.
 13. Abre `proyecto-base/index.html` en tu navegador.
-   - **Qué debes ver:** el sitio Mercado Nube con encabezado, banner y secciones incompletas.
+   - **Qué debes ver:** el sitio Contoso Retail con encabezado, banner y secciones incompletas.
 
 ## 5. Prompt sugerido para Copilot
 

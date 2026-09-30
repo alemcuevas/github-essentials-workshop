@@ -101,7 +101,7 @@ git status
 ## 7. Vista previa del sitio
 
 - [ ] Abre `proyecto-base/index.html` desde el explorador de archivos de Windows.
-  - **Qué debes ver:** una página de Mercado Nube con encabezado, espacio de productos y pie de página.
+  - **Qué debes ver:** una página de Contoso Retail con encabezado, espacio de productos y pie de página.
 
 No necesitas instalar un servidor. Después de cada cambio, guarda el archivo y actualiza el navegador.
 

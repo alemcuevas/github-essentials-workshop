@@ -37,7 +37,7 @@ No instalarás JavaScript, frameworks, npm ni dependencias. El proyecto usa úni
 
 ## Proyecto continuo
 
-Construirás **Mercado Nube**, una tienda ficticia con:
+Construirás **Contoso Retail**, una tienda ficticia con:
 
 - encabezado y navegación;
 - banner de promociones;

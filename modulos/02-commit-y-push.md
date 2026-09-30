@@ -85,7 +85,7 @@ git push
 
 > **Prompt para Copilot**
 >
-> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Mercado Nube. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
+> En `proyecto-base/index.html`, genera dentro de `.product-grid` seis tarjetas semánticas para una tienda ficticia llamada Contoso Retail. Incluye productos genéricos de electrónica, hogar, despensa, ropa y juguetes. Cada tarjeta debe tener imagen con URL pública de marcador, texto alternativo útil, nombre, precio ficticio en pesos mexicanos y un enlace con apariencia de botón. No uses JavaScript, marcas reales ni estilos en línea.
 
 > **Prompt para Copilot**
 >

@@ -4,7 +4,7 @@ Antes de enviar un error o código a Copilot, elimina credenciales, datos person
 
 ## Generar contenido del sitio
 
-> En `proyecto-base/index.html`, crea `[DESCRIBE LA SECCIÓN]` para Mercado Nube, una tienda ficticia. Usa HTML semántico, contenido genérico y clases descriptivas. No uses JavaScript, frameworks, estilos en línea, marcas reales ni datos de contacto.
+> En `proyecto-base/index.html`, crea `[DESCRIBE LA SECCIÓN]` para Contoso Retail, una tienda ficticia. Usa HTML semántico, contenido genérico y clases descriptivas. No uses JavaScript, frameworks, estilos en línea, marcas reales ni datos de contacto.
 
 > Genera cuatro tarjetas de productos ficticios con nombre, precio en pesos mexicanos, imagen de marcador y texto alternativo útil. Incluye productos de categorías distintas. No uses marcas reales.
 

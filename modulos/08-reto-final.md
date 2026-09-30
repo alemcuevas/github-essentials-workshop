@@ -112,7 +112,7 @@ git push
 
 > **Prompt para Copilot**
 >
-> Implementa una sección de tres beneficios para Mercado Nube: compra sencilla, variedad y atención clara. Usa HTML semántico y CSS puro compatible con las variables existentes. Debe ser adaptable, accesible y verse bien sin imágenes. No uses JavaScript, dependencias, marcas reales ni datos de contacto.
+> Implementa una sección de tres beneficios para Contoso Retail: compra sencilla, variedad y atención clara. Usa HTML semántico y CSS puro compatible con las variables existentes. Debe ser adaptable, accesible y verse bien sin imágenes. No uses JavaScript, dependencias, marcas reales ni datos de contacto.
 
 > **Prompt para Copilot**
 >

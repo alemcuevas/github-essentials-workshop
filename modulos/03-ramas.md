@@ -102,7 +102,7 @@ git push -u origin HEAD
 
 > **Prompt para Copilot**
 >
-> Crea estilos adaptables para la lista de categorías usando CSS Grid y las variables ya definidas. Conserva la apariencia de Mercado Nube y agrega estados `hover` y `focus-visible`.
+> Crea estilos adaptables para la lista de categorías usando CSS Grid y las variables ya definidas. Conserva la apariencia de Contoso Retail y agrega estados `hover` y `focus-visible`.
 
 ## 6. Punto de control
 

@@ -117,7 +117,7 @@ git push
 
 > **Prompt para Copilot — persona A**
 >
-> Agrega debajo de `.site-header` una franja semántica de promoción para Mercado Nube con el texto “Envío sin costo en compras participantes”. Incluye un enlace a `#productos`. Genera HTML y CSS puro, accesible y adaptable. No uses JavaScript ni marcas reales.
+> Agrega debajo de `.site-header` una franja semántica de promoción para Contoso Retail con el texto “Envío sin costo en compras participantes”. Incluye un enlace a `#productos`. Genera HTML y CSS puro, accesible y adaptable. No uses JavaScript ni marcas reales.
 
 > **Prompt para Copilot — persona B**
 >

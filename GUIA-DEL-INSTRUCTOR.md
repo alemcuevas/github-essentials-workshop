@@ -4,7 +4,7 @@ Esta guía permite impartir el taller sin haber participado en su diseño. El ob
 
 ## Resultado esperado
 
-Al terminar, cada equipo habrá llevado una mejora del sitio ficticio Mercado Nube por este recorrido:
+Al terminar, cada equipo habrá llevado una mejora del sitio ficticio Contoso Retail por este recorrido:
 
 `archivo local → staging → commit → push → Pull Request → revisión → dev → validación → main`
 
