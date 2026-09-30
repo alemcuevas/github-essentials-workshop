@@ -1,0 +1,35 @@
+# Glosario de Git y GitHub
+
+- **Aprobación:** confirmación de una persona revisora de que un Pull Request puede integrarse.
+- **Branch o rama:** línea de trabajo identificada que permite cambiar el proyecto sin alterar de inmediato otras líneas.
+- **Checkout:** acción histórica para cambiar de rama o recuperar archivos; en este taller preferimos `git switch` para cambiar de rama.
+- **Clonar:** crear una copia local de un repositorio remoto con su historial y conexión.
+- **Commit:** registro identificado de un conjunto de cambios preparados, su autor, fecha y mensaje.
+- **Conflicto:** situación en la que Git necesita una decisión humana para combinar cambios incompatibles.
+- **Deploy o despliegue:** proceso que publica una versión de la aplicación en un ambiente.
+- **Dev:** rama compartida donde se reúnen mejoras antes de proponerlas a `main`.
+- **Diff:** comparación que muestra líneas agregadas, eliminadas o modificadas.
+- **Directorio de trabajo o working directory:** archivos locales que puedes abrir y editar.
+- **Fetch:** consulta que descarga referencias del remoto sin integrar cambios en tus archivos.
+- **Feature branch:** rama de corta duración dedicada a una mejora concreta.
+- **Git:** herramienta de control de versiones que registra cambios y ramas principalmente en tu computadora.
+- **GitHub:** servicio para alojar repositorios Git, colaborar, revisar y automatizar.
+- **HEAD:** referencia que señala el commit y, normalmente, la rama donde estás trabajando.
+- **Historial:** secuencia de commits que explica cómo evolucionó el repositorio.
+- **Issue:** elemento de GitHub para registrar una tarea, idea, pregunta o problema.
+- **Local:** copia y operaciones que existen en tu computadora.
+- **Main:** rama que representa la versión aprobada para el flujo de producción del taller.
+- **Merge:** operación que integra el historial de una rama en otra.
+- **Origin:** nombre convencional del repositorio remoto desde el que clonaste.
+- **Pull:** operación que trae cambios de la rama remota asociada y los integra en la rama actual.
+- **Pull Request o PR:** solicitud en GitHub para revisar e integrar una rama en otra.
+- **Push:** operación que publica commits locales en un repositorio remoto.
+- **Rama base:** rama que recibirá los cambios de un Pull Request.
+- **Rama protegida:** rama con reglas que limitan el push o el merge hasta cumplir condiciones.
+- **Remoto:** repositorio alojado fuera de tu copia local, como el que está en GitHub.
+- **Repositorio:** carpeta del proyecto junto con el historial que Git administra.
+- **Revisión:** lectura y evaluación de un cambio antes de aprobar su integración.
+- **Staging area:** área donde eliges exactamente qué cambios entrarán al siguiente commit.
+- **Status:** resumen de la rama actual, cambios preparados, cambios pendientes y operaciones en curso.
+- **Upstream:** rama remota asociada a una rama local para que `push` y `pull` sepan su destino.
+- **Validación o check:** comprobación automática o manual que debe terminar antes de integrar o desplegar.
