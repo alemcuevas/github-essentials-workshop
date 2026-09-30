@@ -126,6 +126,10 @@ Puedes continuar aunque no hayas terminado una mejora visual: el objetivo princi
 
 ## Referencias rápidas
 
+- **One pagers del taller**
+  - [De tu estación a producción](./DE-TU-ESTACION-A-PRODUCCION.PNG)
+  - [GitHub Kitchen Challenge](./GITHUB-KITCHEN-CHALLENGE.PNG)
+  - Crédito: **Diana Lira**, creadora de los materiales y creadora de la idea.
 - [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md)
 - [Reglas de colaboración](./CONTRIBUTING.md)
 - [Glosario](./GLOSARIO.md)
