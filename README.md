@@ -129,6 +129,7 @@ Puedes continuar aunque no hayas terminado una mejora visual: el objetivo princi
 - [Guía del estudiante](./GUIA-DEL-ESTUDIANTE.md)
 - [Reglas de colaboración](./CONTRIBUTING.md)
 - [Glosario](./GLOSARIO.md)
+- [Ciclo de desarrollo](./CICLO-DE-DESARROLLO.md)
 - [Comandos de Git](./recursos/comandos-git.md)
 - [Guía de diagnóstico](./recursos/guia-de-diagnostico.md)
 - [Prompts para GitHub Copilot](./recursos/prompts-para-copilot.md)
